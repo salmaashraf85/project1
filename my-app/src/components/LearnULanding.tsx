@@ -28,10 +28,10 @@ const LearnULanding: React.FC = () => {
           overflow: 'hidden',
         }}
       >
-        {/* Left Side with minimized width */}
+        {/* Left Side */}
         <Box
           sx={{
-            width: { xs: '100%', md: '50%' }, // Minimize width to 30% for medium and larger screens
+            width: { xs: '100%', md: '50%' }, 
             p: { xs: 3, md: 6 },
             display: 'flex',
             flexDirection: 'column',
