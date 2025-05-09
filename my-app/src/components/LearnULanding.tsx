@@ -31,7 +31,7 @@ const LearnULanding: React.FC = () => {
         {/* Left Side with minimized width */}
         <Box
           sx={{
-            width: { xs: '100%', md: '30%' }, // Minimize width to 30% for medium and larger screens
+            width: { xs: '100%', md: '50%' }, // Minimize width to 30% for medium and larger screens
             p: { xs: 3, md: 6 },
             display: 'flex',
             flexDirection: 'column',
