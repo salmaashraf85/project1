@@ -5,18 +5,22 @@ import Courses from './Courses';
 import Search from './Search';
 import Saved from './Saved';
 import React from 'react';
+import Home from './Home';
 import OnboardingCard from "./LearnULanding";
 
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
         <Route index element={<OnboardingCard />} /> 
+        <Route path="/main" element={<MainLayout />}>
+        <Route index element={<Home />} />  // Default child route
+        <Route path="home" element={<Home />} />
         <Route path="search" element={<Search />} />
         <Route path="courses" element={<Courses />} />
         <Route path="saved" element={<Saved />} />
         <Route path="profile" element={<Profile />} />
-      </Route>
+</Route>
+   
     </Routes>
   );
 }

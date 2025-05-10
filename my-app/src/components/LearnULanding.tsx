@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Typography, Button, Stack } from '@mui/material';
-
+import { useNavigate } from 'react-router-dom';
+import MainLayout from './MainLayout';
 const LearnULanding: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -109,6 +111,7 @@ const LearnULanding: React.FC = () => {
               borderRadius: '16px',
               width: 'fit-content',
             }}
+            onClick={() => navigate('/main/home')}
           >
             Get Started
           </Button>

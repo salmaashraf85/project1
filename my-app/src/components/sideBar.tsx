@@ -77,7 +77,7 @@ export default function Sidebar() {
     {/* Home Item */}
     <ListItemButton 
     component={NavLink}
-    to="/"
+    to="/main/home"
     sx={navLinkStyles}
         >
           <ListItemIcon sx={{ 
@@ -103,7 +103,7 @@ export default function Sidebar() {
           
       <ListItemButton 
     component={NavLink}
-    to="/search"
+    to="/main/search"
     sx={navLinkStyles}
         >
           <ListItemIcon sx={{ 
@@ -128,7 +128,7 @@ export default function Sidebar() {
            
            <ListItemButton 
     component={NavLink}
-    to="/courses"
+    to="/main/courses"
     sx={navLinkStyles}
         >
           <ListItemIcon sx={{ 
@@ -155,7 +155,7 @@ export default function Sidebar() {
                   
                   <ListItemButton 
     component={NavLink}
-    to="/saved"
+    to="/main/saved"
     sx={navLinkStyles}
         >
           <ListItemIcon sx={{ 
@@ -181,7 +181,7 @@ export default function Sidebar() {
                   
                    <ListItemButton 
     component={NavLink}
-    to="/profile"
+    to="/main/profile"
     sx={navLinkStyles}
         >
           <ListItemIcon sx={{ 
