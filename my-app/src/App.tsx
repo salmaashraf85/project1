@@ -1,15 +1,12 @@
 import React from "react";
-import { CssBaseline, Container } from "@mui/material";
-import OnboardingCard from "./components/LearnULanding";
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from "./components/AppRoutes"; 
 
 const App: React.FC = () => {
   return (
-    <>
-      <CssBaseline />
-      <Container>
-        <OnboardingCard />
-      </Container>
-    </>
+    <Router>
+      <AppRoutes /> 
+    </Router>
   );
 };
 
