@@ -12,8 +12,11 @@ export default function Sidebar() {
         alignItems: 'center',
         px: 0,
         py: 1.5,
+        '& .MuiListItemIcon-root': {
+              color: '#bdbdbd',
+            },
+             
         '&.active': {
-            backgroundColor: 'rgba(0, 0, 0, 0.08)',
             color: 'primary.main',
         
             '& .MuiListItemIcon-root': {
@@ -33,10 +36,8 @@ export default function Sidebar() {
       sx={{
         '& .MuiDrawer-paper': {
           width: 60,
-          marginTop: '20px' ,
-          marginLeft:'5px',
-          borderTopRightRadius: 30,
-          borderBottomRightRadius: 30,
+          overflow: 'hidden',
+          marginLeft:'5px', 
           backgroundColor: '#ffffff',
           boxShadow: '2px 0 10px rgba(0, 0, 0, 0.05)',
           display: 'flex',
@@ -83,7 +84,7 @@ export default function Sidebar() {
           <ListItemIcon sx={{ 
             minWidth: 'auto',
             mb: 0.5 ,
-            color: "rgb(155, 153, 153)"
+            color: "#9e9e9e"
           }}>
             <HomeIcon/>
           </ListItemIcon>
@@ -94,7 +95,8 @@ export default function Sidebar() {
               mt: 0,
               '& .MuiTypography-root': {
                 fontSize: '0.7rem',
-                lineHeight: 1.2
+                lineHeight: 1.2,
+                color: ' #9e9e9e'
               }
             }}
           />
@@ -109,7 +111,6 @@ export default function Sidebar() {
           <ListItemIcon sx={{ 
             minWidth: 'auto',
             mb: 0.5 ,
-            color: "rgb(155, 153, 153)"
           }}>
             <SearchIcon />
           </ListItemIcon>
@@ -121,6 +122,7 @@ export default function Sidebar() {
               '& .MuiTypography-root': {
                 fontSize: '0.7rem',
                 lineHeight: 1.2
+              , color: ' #9e9e9e'
               }
             }}
           />
@@ -134,7 +136,7 @@ export default function Sidebar() {
           <ListItemIcon sx={{ 
             minWidth: 'auto',
             mb: 0.5 
-            ,color: "rgb(155, 153, 153)"
+            
           }}>
             <PlayCircleIcon />
           </ListItemIcon>
@@ -146,6 +148,7 @@ export default function Sidebar() {
               '& .MuiTypography-root': {
                 fontSize: '0.7rem',
                 lineHeight: 1.2
+                 , color: ' #9e9e9e'
               }
             }}
           />
@@ -161,7 +164,7 @@ export default function Sidebar() {
           <ListItemIcon sx={{ 
             minWidth: 'auto',
             mb: 0.5 
-            ,color: "rgb(155, 153, 153)"
+            
           }}>
             <BookmarkIcon />
           </ListItemIcon>
@@ -172,7 +175,8 @@ export default function Sidebar() {
               mt: 0,
               '& .MuiTypography-root': {
                 fontSize: '0.7rem',
-                lineHeight: 1.2
+                lineHeight: 1.2,
+                color: ' #9e9e9e'
               }
             }}
           />
@@ -187,7 +191,7 @@ export default function Sidebar() {
           <ListItemIcon sx={{ 
             minWidth: 'auto',
             mb: 0.5 
-            ,color: "rgb(155, 153, 153)"
+            
           }}>
             <AccountCircleIcon />
           </ListItemIcon>
@@ -199,6 +203,7 @@ export default function Sidebar() {
               '& .MuiTypography-root': {
                 fontSize: '0.7rem',
                 lineHeight: 1.2
+                , color: ' #9e9e9e'
               }
             }}
           />
