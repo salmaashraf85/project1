@@ -1,13 +1,13 @@
 import { Box ,Divider,Typography} from '@mui/material';
 import { FC,useState } from 'react';
-import SearchInputBox from './common/searchBox';
+import SearchInputBox from '../components/common/searchBox';
 import {Button} from '@mui/material';
-import { CategoryButtons} from './TopSearches';
-import {ColorCheckboxes} from './Categories'
+import { CategoryButtons} from '../components/TopSearches';
+import {ColorCheckboxes} from '../components/Categories'
 import {Rating} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import Levels from './Levels';
-import ImageList from './ImageList';
+import Levels from '../components/Levels';
+import ImageList from '../components/ImageList';
 const Search: FC = () => {
     const [selected, setSelected] = useState('UX Design');
   return (
