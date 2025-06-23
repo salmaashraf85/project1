@@ -10,9 +10,10 @@ import {
   Rating,
   LinearProgress,
   Chip,
-  Grid,
   Container,
 } from '@mui/material';
+
+import Grid from '@mui/material/Grid';
 
 interface Course {
   title: string;

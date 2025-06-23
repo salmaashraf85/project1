@@ -5,7 +5,7 @@ import Courses from './Courses';
 import Search from '../pages/Search';
 import Saved from '../pages/Saved';
 import React from 'react';
-import Home from './Home';
+import Home from '../pages/Home';
 import OnboardingCard from "./LearnULanding";
 
 function AppRoutes() {
