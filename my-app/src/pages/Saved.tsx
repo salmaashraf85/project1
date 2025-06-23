@@ -7,15 +7,14 @@ import CourseDetails from '../components/CourseDetails';
 
 const Saved: FC = () => {
   return (
-    <Container  sx={{backgroundColor:'#F5F5F5'}}>
-  <Box sx={{marginTop:'40px'}}>
+  <Box sx={{margin:{sm:'50px',xs:'30px'},marginTop:'40px'}}>
     <Typography variant='h5' sx={{fontWeight:'bold' ,pb:'25px'}}>Saved Courses</Typography>
       <Box sx={{display:'flex',flexDirection:{sm:'row',xs:'column'},gap:{sm:10,xs:10}}}> 
      <ImageList></ImageList>
     <CourseDetails></CourseDetails>   
     </Box>
     </Box>
-    </Container>
+   
   )
 };
 

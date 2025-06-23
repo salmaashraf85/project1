@@ -16,7 +16,7 @@ return(
     </Box>
     </Box>
     <Typography sx={{fontWeight:'bold',fontSize:'20px' ,pt:'12px',color:"#303030"}}>Building iOS15 App</Typography>
-    <Box sx={{borderRadius:'16px', boxShadow: 1,backgroundColor:'#fff',alignItems:'center',width:'140px',display:'flex',flexDirection:'row',gap:'10px',my:1}}>
+    <Box sx={{borderRadius:'20px', boxShadow: 1,backgroundColor:'#fff',alignItems:'center',width:'140px',display:'flex',flexDirection:'row',gap:'10px',my:1}}>
      <Avatar alt="image" src="https://assets.api.uizard.io/api/cdn/stream/106a750d-2bad-4c6c-bd08-6d8a6c8f7cae.jpg" />
     <Typography>Tom Collins</Typography>
     </Box>
