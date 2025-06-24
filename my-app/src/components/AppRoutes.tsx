@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './MainLayout';
-import Profile from './Profile';
+import Profile from '../pages/Profile';
 import Courses from './Courses';
 import Search from '../pages/Search';
 import Saved from '../pages/Saved';

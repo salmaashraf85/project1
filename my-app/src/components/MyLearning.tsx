@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import MyLearningCard from './MyLearningCard';
 
 interface LearningItem {
@@ -26,17 +26,31 @@ const myLearning: LearningItem[] = [
 
 const MyLearning: React.FC = () => {
   return (
-    <Box sx={{ mb: 4 }}>
+    <Box sx={{ width: '100%', px: 2, mb: 4 }}>
       <Typography variant="h5" fontWeight="bold" mb={2}>
         My Learning
       </Typography>
-      <Grid container spacing={2}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 2,
+        }}
+      >
         {myLearning.map((item, idx) => (
-          <Grid item xs={12} md={6} key={idx}>
+          <Box
+            key={idx}
+            sx={{
+              flex: {
+                xs: '100%', // full width on small screens
+                sm: 'calc(50% - 8px)', // two per row with 16px gap on small+
+              },
+            }}
+          >
             <MyLearningCard item={item} idx={idx} />
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 };

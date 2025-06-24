@@ -7,8 +7,7 @@ import {
   Typography,
   Avatar,
   Button,
-  Rating,
-  Grid
+  Rating
 } from '@mui/material';
 
 interface Course {
@@ -72,14 +71,10 @@ const SaveIcon: React.FC<SaveIconProps> = ({ idx }) => (
       alignItems: 'center',
       width: '32px',
       height: '32px',
-      padding: 0,
       cursor: 'inherit',
-      overflow: 'hidden',
-      opacity: 1,
       color: idx === 0 ? 'rgb(46, 141, 255)' : 'rgb(177, 177, 177)',
       backgroundColor: idx === 0 ? 'rgba(203, 225, 250, 0.3)' : 'rgba(227, 227, 227, 0.3)',
       borderRadius: '10px',
-      border: '0px',
       position: 'absolute',
       top: 8,
       right: 8,
@@ -101,29 +96,52 @@ const SaveIcon: React.FC<SaveIconProps> = ({ idx }) => (
 
 const FeaturedCourses: React.FC = () => {
   return (
-    <Box sx={{ mb: 4 }}>
+    <Box sx={{ width: '100%', px: 2 }}>
       <Typography variant="h5" fontWeight="bold" mb={2}>
         Featured Courses
       </Typography>
-      <Grid container spacing={2}>
+
+      {/* Flex wrapper */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 2,
+        }}
+      >
         {featuredCourses.map((course, idx) => (
-          <Grid item xs={12} sm={6} md={3} key={idx}>
-            <Card sx={{
-              borderRadius: 6,
-              position: 'relative',
-              width: '307px',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
-            }}>
-              <Box sx={{
+          <Box
+            key={idx}
+            sx={{
+              flex: {
+                xs: '100%',
+                sm: 'calc(50% - 8px)',
+                md: 'calc(25% - 12px)'
+              },
+              minWidth: '260px'
+            }}
+          >
+            <Card
+              sx={{
+                borderRadius: 6,
                 position: 'relative',
-                paddingTop: '40%',
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
                 overflow: 'hidden',
-                margin: '12px 12px 0 12px',
-                borderRadius: '8px'
-              }}>
+              }}
+            >
+              <Box
+                sx={{
+                  position: 'relative',
+                  paddingTop: '40%',
+                  overflow: 'hidden',
+                  margin: '12px 12px 0 12px',
+                  borderRadius: '8px',
+                }}
+              >
                 <CardMedia
                   component="img"
                   image={course.img}
@@ -140,46 +158,58 @@ const FeaturedCourses: React.FC = () => {
                 />
                 <SaveIcon idx={idx} />
               </Box>
-              <CardContent sx={{
-                flexGrow: 1,
-                padding: '0px 20px',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
-                <Box sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  backgroundColor: 'rgb(255, 255, 255)',
-                  borderRadius: '20px',
-                  padding: '2px 4px',
-                  maxWidth: '140px',
-                  zIndex: 1,
-                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                  position: 'relative',
-                  top: '-30px',
-                }}>
+
+              <CardContent
+                sx={{
+                  flexGrow: 1,
+                  padding: '0px 20px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    backgroundColor: 'white',
+                    borderRadius: '20px',
+                    padding: '2px 4px',
+                    maxWidth: '140px',
+                    position: 'relative',
+                    top: '-30px',
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  }}
+                >
                   <Avatar
                     src={course.authorImg}
                     sx={{
                       width: 35,
                       height: 35,
                       mr: 0.5,
-                      borderRadius: '50%'
                     }}
                   />
-                  <Typography variant="body1" fontWeight="bold" fontSize="0.9rem" noWrap>
+                  <Typography
+                    variant="body1"
+                    fontWeight="bold"
+                    fontSize="0.9rem"
+                    noWrap
+                  >
                     {course.author}
                   </Typography>
                 </Box>
+
                 <Typography fontWeight="bold" variant="body1">
                   {course.title}
                 </Typography>
-                <Box sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  mt: 'auto'
-                }}>
+
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    mt: 'auto',
+                  }}
+                >
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Typography variant="caption" sx={{ mr: 3 }}>
                       {course.time}
@@ -192,13 +222,14 @@ const FeaturedCourses: React.FC = () => {
                       sx={{
                         '& .MuiRating-icon': {
                           fontSize: '14px',
-                        }
+                        },
                       }}
                     />
                     <Typography variant="caption" sx={{ ml: 1 }}>
                       {course.rating.toFixed(1)}/5
                     </Typography>
                   </Box>
+
                   <Button
                     variant="contained"
                     size="small"
@@ -211,8 +242,8 @@ const FeaturedCourses: React.FC = () => {
                       color: 'white',
                       padding: '0 8px',
                       '&:hover': {
-                        backgroundColor: '#1565c0'
-                      }
+                        backgroundColor: '#1565c0',
+                      },
                     }}
                   >
                     {course.price}
@@ -220,9 +251,9 @@ const FeaturedCourses: React.FC = () => {
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 };

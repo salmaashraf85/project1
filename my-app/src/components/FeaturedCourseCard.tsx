@@ -18,7 +18,7 @@ interface Props {
 }
 
 const FeaturedCourseCard: React.FC<Props> = ({ course, idx }) => (
-  <Card sx={{ borderRadius: 6, position: 'relative', width: '307px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+  <Card sx={{ borderRadius: 6, position: 'relative', width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
     <Box sx={{ position: 'relative', paddingTop: '40%', margin: '12px 12px 0 12px', borderRadius: '8px', overflow: 'hidden' }}>
       <CardMedia component="img" image={course.img} alt={course.title} sx={{ position: 'absolute', width: '100%', height: '100%', objectFit: 'cover' }} />
       <SaveIcon idx={idx} />

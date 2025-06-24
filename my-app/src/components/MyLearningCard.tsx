@@ -52,9 +52,10 @@ const MyLearningCard: React.FC<MyLearningCardProps> = ({ item, idx }) => {
         display: 'flex',
         boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
         height: '150px',
-        width: '635px',
+        width: '100%',
         position: 'relative',
         overflow: 'hidden',
+        marginBottom: 2, 
       }}
     >
       <CardMedia
@@ -102,8 +103,6 @@ const MyLearningCard: React.FC<MyLearningCardProps> = ({ item, idx }) => {
       </CardContent>
     </Card>
   );
-
-
 };
 
 export default MyLearningCard;

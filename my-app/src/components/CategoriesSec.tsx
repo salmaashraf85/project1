@@ -1,4 +1,4 @@
-// components/CategoriesSec.tsx
+
 
 import React from 'react';
 import { Box, Typography } from '@mui/material';
@@ -9,7 +9,7 @@ const categories: string[] = [
 
 const CategoriesSec: React.FC = () => {
   return (
-    <Box sx={{ mb: 4 }}>
+    <Box sx={{ width: '100%', px: 2, mb: 4 }}>
       <Typography variant="h5" fontWeight="bold" mb={2}>
         Categories
       </Typography>
@@ -17,7 +17,7 @@ const CategoriesSec: React.FC = () => {
         display: 'flex',
         flexWrap: 'wrap',
         gap: 2,
-        width: '90%',
+        width: '100%',
         justifyContent: 'flex-start',
       }}>
         {categories.map((cat, idx) => {
@@ -76,7 +76,7 @@ const CategoriesSec: React.FC = () => {
                     <path d="m19 9 1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/>
                   </svg>
                 );
-              // Add other cases for HR, Drawing, etc.
+              
               default:
                 return null;
             }
