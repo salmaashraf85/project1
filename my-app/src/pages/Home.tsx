@@ -13,25 +13,10 @@ import {
   Container,
 } from '@mui/material';
 
+import { Course } from '../types/courseTypes';
 import Grid from '@mui/material/Grid';
 
-interface Course {
-  title: string;
-  author: string;
-  time: string;
-  rating: number;
-  price: string;
-  img: string;
-  authorImg: string;
-}
-
-interface LearningItem {
-  title: string;
-  author: string;
-  progress: number;
-  img: string;
-}
-
+import { LearningItem } from '../types/courseTypes';
 const featuredCourses: Course[] = [
   {
     title: "Power BI",
@@ -391,7 +376,8 @@ const Home: React.FC = () => {
           My Learning
         </Typography>
         <Grid container spacing={2}>
-          {myLearning.map((item, idx) => (
+          {
+          myLearning.map((item, idx) => (
             <Grid item xs={12} md={6} key={idx}>
               <Card sx={{ 
                 borderRadius: 6,
