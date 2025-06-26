@@ -2,23 +2,7 @@ import { Box, Typography,Stack,Button } from '@mui/material';
 import { FC } from 'react';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { useState } from 'react';
-const courses = [
-  {
-    title: "TypeFace Design",
-    author: "Gary Saltz",
-    img: "https://assets.api.uizard.io/api/cdn/stream/8a82fb6d-e077-4930-b16d-a47ec1537f4a.jpg"
-  },
-  {
-    title: "Building iOS15 App",
-    author: "Tom Colins",
-    img: "https://assets.api.uizard.io/api/cdn/stream/c4abf0fb-78c0-4ced-9b10-ce75c6350a1c.jpg"
-  },
-  {
-    title: "Excel:Formulas and functions",
-    author: "Mike Curtis",
-    img: "https://assets.api.uizard.io/api/cdn/stream/6b7ace23-9ec2-4b4e-963f-c0097a8bba79.jpg"
-  }
-];
+import { courses } from '../api/api';
 const ImageList: FC = () => {
 const [selectedIndex, setSelectedIndex] = useState<number>(1)
  return (
