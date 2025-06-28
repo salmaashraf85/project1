@@ -1,3 +1,4 @@
+
 import React, { FC } from 'react';
 import { Box, Container } from '@mui/material';
 import ProfileInfo from '../components/ProfileInfo';
@@ -11,7 +12,9 @@ const Profile: FC = () => {
       component="main"
       sx={{
         flexGrow: 1,
-        p: 3,
+        px: 0,
+        pt: 3,
+        pd: 3,
         backgroundColor: '#f9f9f9',
         minHeight: '100vh',
       }}
@@ -25,7 +28,7 @@ const Profile: FC = () => {
           }}
         >
           {/* LEFT SIDE: Profile info, statistics, achievements */}
-          <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 3 }}>
+          <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 3 , ml: { xs: 0, md: -10 } , mr: { xs: 0, md: 10 } }}>
             <ProfileInfo />
             <TotalStatistics />
             <Achievements />
@@ -42,3 +45,4 @@ const Profile: FC = () => {
 };
 
 export default Profile;
+
