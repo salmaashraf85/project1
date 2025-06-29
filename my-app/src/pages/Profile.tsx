@@ -1,4 +1,3 @@
-
 import React, { FC } from 'react';
 import { Box, Container } from '@mui/material';
 import ProfileInfo from '../components/ProfileInfo';
@@ -45,4 +44,5 @@ const Profile: FC = () => {
 };
 
 export default Profile;
+
 

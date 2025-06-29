@@ -24,5 +24,8 @@ export interface DetailedCourse extends Course {
   btn1:string;
   btn2:string;
   overlay?:React.ReactNode;
+  topics?:{ [key: string]: number };
+  isPreview?:boolean;
+  setIsPreview?: (arg0: boolean) => void;
 }
 

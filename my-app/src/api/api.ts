@@ -56,7 +56,14 @@ export const DetailedItems: DetailedCourse[] = [
     price:"",
     description:"In this course you will learn how to build iOS app. We will go through the whole process beginning with first line of code,managing the user interface storyboard and creating logic.",
     rating:5.0,
-    authorImg:"https://assets.api.uizard.io/api/cdn/stream/01585e0f-4fe2-478d-930d-de730b3ccdc0.jpg"
+    authorImg:"https://assets.api.uizard.io/api/cdn/stream/01585e0f-4fe2-478d-930d-de730b3ccdc0.jpg",
+    topics:{
+      "Introduction":1,
+      "Software setup":3,
+      "UI fundamentals":6,
+      "Testing and finishing":2,
+      "Skill test":1
+    }
   }
 
 ];
