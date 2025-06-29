@@ -7,6 +7,7 @@ import { courseItems, DetailedItems } from "../api/api";
 import CourseDetails from "../components/CourseDetails";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import CourseActionsButtons from "../components/CourseActionButtons";
+
 const Courses: FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
   const item = DetailedItems[0];
@@ -42,10 +43,13 @@ const Courses: FC = () => {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          
+          
           {courseItems.map((c, index) => (
             <CourseCard
               key={index}
               onClick={() => setSelectedIndex(index)}
+
               sx={{
                 transition: "0.3s",
                 cursor: "pointer",
@@ -67,10 +71,12 @@ const Courses: FC = () => {
               img={c.img}
               progress={c.progress}
               width={{ sm: "500px", xs: "100%" }}
+             
             />
           ))}
         </Box>
         <Box>
+
           <CourseDetails
             title={item.title}
             description={item.description}

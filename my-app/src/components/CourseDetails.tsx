@@ -4,6 +4,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import StarIcon from '@mui/icons-material/Star';
 import { grey } from "@mui/material/colors";
 import { DetailedCourse } from "../types/courseTypes";
+
 const CourseDetails: FC<DetailedCourse>=({title,author,time,rating,img,authorImg,description,btn1,btn2,overlay,isPreview,setIsPreview})=>{
 
 return(
