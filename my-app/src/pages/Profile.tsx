@@ -28,7 +28,9 @@ const Profile: FC = () => {
           }}
         >
           {/* LEFT SIDE: Profile info, statistics, achievements */}
-          <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 3 , ml: { xs: 0, md: -9 } , mr: { xs: 0, md: 9 } }}>
+
+          <Box sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 3 , ml: { xs: 0, md: -10 } , mr: { xs: 0, md: 10 } }}>
+
             <ProfileInfo />
             <TotalStatistics />
             <Achievements />
