@@ -172,6 +172,7 @@ const FeaturedCourses: React.FC = () => {
                     display: 'inline-flex',
                     alignItems: 'center',
                     backgroundColor: 'white',
+                    color:'background.paper',
                     borderRadius: '20px',
                     padding: '2px 4px',
                     maxWidth: '140px',
@@ -238,8 +239,8 @@ const FeaturedCourses: React.FC = () => {
                       minWidth: '50px',
                       height: '30px',
                       fontSize: '0.75rem',
-                      backgroundColor: '#1976d2',
-                      color: 'white',
+                      backgroundColor: '#2196f3',
+                      color: 'background.paper',
                       padding: '0 8px',
                       '&:hover': {
                         backgroundColor: '#1565c0',

@@ -15,7 +15,7 @@ const Profile: FC = () => {
         px: 0,
         pt: 3,
         pd: 3,
-        backgroundColor: '#f9f9f9',
+        backgroundColor: 'background.default',
         minHeight: '100vh',
       }}
     >

@@ -61,7 +61,7 @@ const TotalStatistics: React.FC = () => {
             sx={{
               flex: "1 1 200px", // responsive width
               p: 1,
-              backgroundColor: "#fff",
+              backgroundColor: "background.paper",
               borderRadius: "24px",
               boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
               textAlign: "center",

@@ -3,6 +3,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const ProfileInfo: React.FC = () => {
   return (
+    
     <Box display="flex" alignItems="flex-start" gap={3} flexWrap="wrap" width="100%">
       {/* Profile Picture */}
       <Avatar
@@ -16,8 +17,8 @@ const ProfileInfo: React.FC = () => {
       />
 
       {/* User Info */}
-      <Box flex={1}> {/* ✅ This makes it stretch to fill remaining space */}
-        <Typography variant="h5" fontWeight="bold" fontSize={40} sx={{color:"#444"}}>Sally Robins</Typography>
+      <Box flex={1} > {/* ✅ This makes it stretch to fill remaining space */}
+        <Typography variant="h5" fontWeight="bold" fontSize={40} sx={{color:"text.secondary"}}>Sally Robins</Typography>
 
         {/* Location with Icon */}
         <Box display="flex" alignItems="center" gap={0.5} mt={0.5}>
@@ -33,7 +34,7 @@ const ProfileInfo: React.FC = () => {
             sx={{
               p: 2,
               borderRadius: 5,
-              backgroundColor: '#f9f9f9',
+              backgroundColor: 'background.paper',
               boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
             }}
           >

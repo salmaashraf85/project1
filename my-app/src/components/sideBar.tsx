@@ -8,9 +8,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 export default function Sidebar() {
     const navLinkStyles = {
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
-        px: 0,
+        px: 2,
         py: 1.5,
         '& .MuiListItemIcon-root': {
               color: '#bdbdbd',
@@ -35,7 +35,7 @@ export default function Sidebar() {
       variant="permanent"
       sx={{
         '& .MuiDrawer-paper': {
-          width: 60,
+          width: 75,
           overflow: 'hidden',
           marginLeft:'5px', 
           backgroundColor: '#ffffff',

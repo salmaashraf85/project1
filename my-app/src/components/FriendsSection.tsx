@@ -38,7 +38,7 @@ const FriendsSection = () => {
       {/* Friend Suggestions Box */}
       <Box
         sx={{
-          backgroundColor: "white",
+          backgroundColor: "background.paper",
           borderRadius: 7,
           p: 1.5,
           boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.03)",
@@ -120,7 +120,7 @@ const FriendsSection = () => {
       {/* Friends Box */}
       <Box
         sx={{
-          backgroundColor: "white",
+          backgroundColor: "background.paper",
           borderRadius: 7,
           p: 1.5,
           boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.03)",
@@ -190,6 +190,8 @@ const FriendsSection = () => {
           sx={{
             textTransform: "none",
             borderRadius: 2,
+            borderColor: "text.secondary",
+            color: "text.secondary",
           }}
         >
           FIND FRIENDS

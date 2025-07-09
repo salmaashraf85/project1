@@ -55,7 +55,7 @@ const CategoriesSec: React.FC = () => {
                 );
               case 'Design':
                 return (
-                   <svg viewBox="0 0 24 24" style={{ width: 24, height: 24, fill: '#b1b1b1' }}>
+                  <svg viewBox="0 0 24 24" style={{ width: 24, height: 24, fill: '#b1b1b1' }}>
                       <path fill="none" d="M0 0h24v24H0z" />
                       <path d="m16.24 11.51 1.57-1.57-3.75-3.75-1.57 1.57-4.14-4.13c-.78-.78-2.05-.78-2.83 0l-1.9 1.9c-.78.78-.78 2.05 0 2.83l4.13 4.13L3 17.25V21h3.75l4.76-4.76 4.13 4.13c.95.95 2.23.6 2.83 0l1.9-1.9c.78-.78.78-2.05 0-2.83l-4.13-4.13zm-7.06-.44L5.04 6.94l1.89-1.9L8.2 6.31 7.02 7.5l1.41 1.41 1.19-1.19 1.45 1.45-1.89 1.9zm7.88 7.89-4.13-4.13 1.9-1.9 1.45 1.45-1.19 1.19 1.41 1.41 1.19-1.19 1.27 1.27-1.9 1.9zm3.65-11.92a.996.996 0 0 0 0-1.41l-2.34-2.34c-.47-.47-1.12-.29-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
                     </svg>
@@ -90,7 +90,7 @@ const CategoriesSec: React.FC = () => {
                 py: 2,
                 fontWeight: 'bold',
                 borderRadius: 6,
-                backgroundColor: isBlueCategory ? 'rgba(25, 118, 210, 0.1)' : 'white',
+                backgroundColor: isBlueCategory ? 'rgba(25, 118, 210, 0.1)' : 'background.paper',
                 boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
                 fontSize: '0.875rem',
                 border: isBlueCategory ? '2px solid rgba(25, 118, 210, 0.3)' : 'none',
@@ -104,7 +104,7 @@ const CategoriesSec: React.FC = () => {
                 height: '70px',
                 cursor: 'pointer',
                 '&:hover': {
-                  backgroundColor: isBlueCategory ? 'rgba(25, 118, 210, 0.2)' : 'white',
+                  backgroundColor: isBlueCategory ? 'rgba(25, 118, 210, 0.2)' : '#2196f3',
                   boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
                   ...(isBlueCategory && {
                     borderColor: 'rgba(25, 118, 210, 0.5)',

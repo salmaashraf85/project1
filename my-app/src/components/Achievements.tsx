@@ -57,7 +57,7 @@ const Achievements: React.FC = () => {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                backgroundColor: "#fff",
+                backgroundColor: "background.paper",
                 borderRadius: "16px",
                 boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.04)",
                 p: 2,
