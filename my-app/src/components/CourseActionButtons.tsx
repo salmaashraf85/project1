@@ -13,7 +13,7 @@ const CourseActionsButtons:React.FC <ButtonProps>= ({isPreviwed,setIsPreviewd,bt
     }}
     variant="outlined"
     sx={{
-      width: { sm: '24%', xs: '100%' },
+      width: { md: '47%', xs: '100%' },
       color: '#2E8DFF',
       textTransform: 'uppercase',
       fontWeight: 600,
@@ -29,7 +29,7 @@ const CourseActionsButtons:React.FC <ButtonProps>= ({isPreviwed,setIsPreviewd,bt
   <Button
     variant="contained"
     sx={{
-      width: { sm: isPreviwed?'42%':'24%', xs: '100%' },
+      width: { sm: isPreviwed?'97%':'47%', xs: '100%' },
       textTransform: 'uppercase',
       fontWeight: 600,
       fontSize: { xs: '0.7rem', md: '0.875rem' },

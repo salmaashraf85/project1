@@ -70,7 +70,8 @@ const Courses: FC = () => {
             />
           ))}
         </Box>
-        <Box>
+      
+           <Box sx={{width:{md:'50%',xs:'100%'},display:'flex',flexDirection:'column',gap:3}}>
           <CourseDetails
             title={item.title}
             description={item.description}
@@ -83,12 +84,13 @@ const Courses: FC = () => {
             author={item.author}
             price=""
           />
-        </Box>
-      </Box>
-      <CourseActionsButtons
+   <CourseActionsButtons
         btnName1="review course"
         btnName2="Continue learning"
       ></CourseActionsButtons>
+    </Box>
+      </Box>
+      
     </Box>
   );
 };

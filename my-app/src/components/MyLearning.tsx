@@ -1,30 +1,11 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import MyLearningCard from './MyLearningCard';
-
-interface LearningItem {
-  title: string;
-  author: string;
-  progress: number;
-  img: string;
-}
-
-const myLearning: LearningItem[] = [
-  {
-    title: "Becoming a Photographer",
-    author: "Clara Manning",
-    progress: 69,
-    img: "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba",
-  },
-  {
-    title: "Design Thinking 2.0",
-    author: "Chris Kinley",
-    progress: 27,
-    img: "https://assets.api.uizard.io/api/cdn/stream/2c1a496b-9948-4cb1-b87e-dbd417261382.jpg",
-  },
-];
+import { useState } from 'react';
+import { myLearning } from '../api/api';
+import CourseCard from './CourseCard';
 
 const MyLearning: React.FC = () => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(0);
   return (
     <Box sx={{ width: '100%', px: 2, mb: 4 }}>
       <Typography variant="h5" fontWeight="bold" mb={2}>
@@ -37,22 +18,61 @@ const MyLearning: React.FC = () => {
           gap: 2,
         }}
       >
-        {myLearning.map((item, idx) => (
-          <Box
-            key={idx}
-            sx={{
+          {myLearning.map((c, index) => (
+            <Box  sx={{
               flex: {
                 xs: '100%', // full width on small screens
                 sm: 'calc(50% - 8px)', // two per row with 16px gap on small+
               },
-            }}
-          >
-            <MyLearningCard item={item} idx={idx} />
-          </Box>
-        ))}
+            }}>
+            <CourseCard
+              key={index}
+              onClick={() => setSelectedIndex(index)}
+              sx={{
+                transition: "0.3s",
+                cursor: "pointer",
+                backgroundColor:
+                  selectedIndex === index ? "#e0f3ff" : "#FBFBFB",
+                border:
+                  selectedIndex === index
+                    ? "2px solid #2196f3"
+                    : "1px solid transparent",
+                boxShadow: selectedIndex === index ? 3 : 0,
+                "&:hover": {
+                  backgroundColor:
+                    selectedIndex === index ? "#e0f3ff" : "#eaeaea",
+                  boxShadow: 2,
+                },
+              }}
+              title={c.title}
+              author={c.author}
+              img={c.img}
+              progress={c.progress}
+              width={{ sm: "100%", xs: "100%" }}
+            />
+            </Box>
+          ))}
+        </Box>
       </Box>
-    </Box>
   );
 };
 
 export default MyLearning;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
