@@ -4,7 +4,8 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import StarIcon from '@mui/icons-material/Star';
 import { grey } from "@mui/material/colors";
 import { DetailedCourse } from "../types/courseTypes";
-const CourseDetails: FC<DetailedCourse>=({title,author,time,rating,img,authorImg,description,btn1,btn2,overlay})=>{
+
+const CourseDetails: FC<DetailedCourse>=({title,author,time,rating,img,authorImg,description,btn1,btn2,overlay,isPreview,setIsPreview})=>{
 
 return(
     <Container  sx={{backgroundColor:'#FBFBFB'}}>
@@ -31,8 +32,7 @@ return(
     </Box>
     <Typography sx={{fontWeight:'bold',fontSize:{sm:'20px',xs:'15px'} ,pt:'12px',color:"#303030"}}>Course Description</Typography>
     <Typography color="#616161" sx={{fontSize:{xs:'13px',sm:'15px'}}}>{description}</Typography>
-    <Button variant="outlined" sx={{mr:2,width:{sm:'48%',xs:'100%'},my:{sm:'30px',xs:'10px'},color:'#2E8DFF',textTransform: 'uppercase',fontWeight: 600,fontSize: { xs: '0.7rem', md: '0.875rem' },borderRadius: '10px', height:'40px'  }} >{btn1}</Button>
-    <Button variant="contained" sx={{width:{sm:'48%',xs:'100%'},my:{sm:'30px',xs:'10px'},textTransform: 'uppercase',fontWeight: 600,fontSize: { xs: '0.7rem', md: '0.875rem' },backgroundColor: '#2E8DFF','&:hover': { backgroundColor: '#1C74D4' },borderRadius: '10px', height:'40px'  }} >{btn2}</Button>
+
 </Container>
 )  
 };

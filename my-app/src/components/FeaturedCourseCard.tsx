@@ -2,15 +2,7 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Avatar, Button, Rating, Box } from '@mui/material';
 import SaveIcon from './SaveIcon';
 
-interface Course {
-  title: string;
-  author: string;
-  time: string;
-  rating: number;
-  price: string;
-  img: string;
-  authorImg: string;
-}
+import { Course } from '../types/courseTypes';
 
 interface Props {
   course: Course;
